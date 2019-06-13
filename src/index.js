@@ -238,6 +238,10 @@ const Swipeout = createReactClass({
       } else {
         this._close();
       }
+    }else {
+      if (this.props.onClick) {
+        this.props.onClick();
+      }
     }
 
     //  Allow scroll
