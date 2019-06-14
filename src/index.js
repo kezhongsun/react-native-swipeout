@@ -236,6 +236,11 @@ const Swipeout = createReactClass({
       } else if (openLeft && contentPos > 0 && posX > 0) {
         this._open(btnsLeftWidth, 'left');
       } else {
+        if (!openLeft && !openRight) {
+            if (this.props.onClick) {
+                this.props.onClick();
+            }
+        }
         this._close();
       }
     }else {
