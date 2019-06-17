@@ -262,7 +262,7 @@ var Swipeout = (0, _createReactClass2.default)({
       } else if (openLeft && contentPos > 0 && posX > 0) {
         this._open(btnsLeftWidth, 'left');
       } else {
-        if (!openLeft && !openRight) {
+        if (!openLeft && !openRight && contentPos === 0) {
             if (this.props.onClick) {
                 this.props.onClick();
             }
