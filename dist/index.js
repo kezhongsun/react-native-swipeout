@@ -269,7 +269,7 @@ var Swipeout = (0, _createReactClass2.default)({
           this._close();
       }
     } else {
-          if(gestureState.moveY==0){
+          if(gestureState.dy==0){
             if(this.props.onClick){
                 this.props.onClick()
             }
