@@ -261,18 +261,19 @@ var Swipeout = (0, _createReactClass2.default)({
         this._open(-btnsRightWidth, 'right');
       } else if (openLeft && contentPos > 0 && posX > 0) {
         this._open(btnsLeftWidth, 'left');
-      } else {
-        if (!openLeft && !openRight && contentPos === 0) {
-            if (this.props.onClick) {
-                this.props.onClick();
+      } else if(!openLeft && !openRight && contentPos==0 && posX==0 && (gestureState.moveY==0)){
+        if(this.props.onClick){
+              this.props.onClick()
+          }
+      } else{
+          this._close();
+      }
+    } else {
+          if(gestureState.moveY==0){
+            if(this.props.onClick){
+                this.props.onClick()
             }
-        }
-        this._close();
-      }
-    }else {
-      if (this.props.onClick) {
-        this.props.onClick();
-      }
+          }      
     }
 
     //  Allow scroll
