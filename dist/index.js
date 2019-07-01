@@ -261,7 +261,7 @@ var Swipeout = (0, _createReactClass2.default)({
         this._open(-btnsRightWidth, 'right');
       } else if (openLeft && contentPos > 0 && posX > 0) {
         this._open(btnsLeftWidth, 'left');
-      } else if(!openLeft && !openRight && contentPos==0 && posX==0 && (gestureState.moveY==0)){
+      } else if(!openLeft && !openRight && contentPos==0 && posX==0 && (gestureState.dy==0)){
         if(this.props.onClick){
               this.props.onClick()
           }
